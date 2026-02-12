@@ -12,20 +12,30 @@ export default function Home() {
       name: "Desert Warmth",
       desc: "Terracotta & sand with flowing organic shapes",
     },
+    // {
+    //   id: 3,
+    //   name: "Neo-Brutalist",
+    //   desc: "Bold, raw, unapologetic clash of color and type",
+    // },
+    // {
+    //   id: 4,
+    //   name: "Editorial Luxe",
+    //   desc: "Magazine-style sophistication with burnt orange accent",
+    // },
+    // {
+    //   id: 5,
+    //   name: "Geometric Mosaic",
+    //   desc: "Islamic tessellations meet digital jewel tones",
+    // },
     {
-      id: 3,
-      name: "Neo-Brutalist",
-      desc: "Bold, raw, unapologetic clash of color and type",
+      id: 6,
+      name: "Twilight Oasis",
+      desc: "Celestial night sky fused with warm desert elegance",
     },
     {
-      id: 4,
-      name: "Editorial Luxe",
-      desc: "Magazine-style sophistication with burnt orange accent",
-    },
-    {
-      id: 5,
-      name: "Geometric Mosaic",
-      desc: "Islamic tessellations meet digital jewel tones",
+      id: 7,
+      name: "Dawn / Fajr",
+      desc: "Soft lavender sky, fading stars, blush horizon — the first light",
     },
   ];
 
@@ -54,7 +64,7 @@ export default function Home() {
         hack.msa
       </h1>
       <p style={{ color: "#888", fontSize: "1.1rem", marginBottom: "3rem" }}>
-        5 Design Explorations
+        4 Design Explorations
       </p>
       <div
         style={{
