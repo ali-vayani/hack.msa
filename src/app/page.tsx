@@ -1,32 +1,33 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import MosqueWeb from "@/components/MosqueWeb";
 
-/* ───────── palette: dawn — fajr light ───────── */
+/* ───────── palette: premium monochrome (warm brown) ───────── */
 const C = {
   // sky gradient (top → bottom)
-  skyTop: "#ddd5e8",       // soft lavender
-  skyMid: "#ecd8cf",       // blush-peach
-  skyBot: "#f8f1e8",       // warm cream
+  skyTop: "#e8dfd4",
+  skyMid: "#efe7dd",
+  skyBot: "#f7f2ec",
   // surfaces
-  surface: "#f3ebe2",      // warm parchment
-  surfaceAlt: "#ede3d8",   // slightly deeper
+  surface: "#fffdf9",
+  surfaceAlt: "#f1eae1",
   // text
-  ink: "#2c2018",          // warm charcoal
-  inkSoft: "#5a4a3c",      // muted brown
-  muted: "#9a887a",        // dusty
-  faint: "#b8a898",        // lighter muted
+  ink: "#2d2218",
+  inkSoft: "#4a3a2b",
+  muted: "#6f5c4c",
+  faint: "#927d6c",
   // accents
-  coral: "#b56a4a",        // dusty coral-terracotta (softer, dawn-tinted)
-  coralLight: "#cc8868",   // lighter coral
-  gold: "#be9a48",         // muted warm gold
-  goldFaint: "#d4b86a",    // lighter gold
+  coral: "#7a5a3d",
+  coralLight: "#8f6a49",
+  gold: "#8a6545",
+  goldFaint: "#a58263",
   // celestial
-  moonColor: "#c8c0d6",    // ghostly lavender
-  starColor: "#e8ddd0",    // warm cream-white star
+  moonColor: "#b49f8c",
+  starColor: "#cfbca9",
   // borders
-  border: "#ddd4ca",
-  borderLight: "#e8e0d8",
+  border: "#ddcfbf",
+  borderLight: "#e9ddd0",
 };
 
 /* ───────── data ───────── */
@@ -140,11 +141,11 @@ function generateStars(count: number) {
   return out;
 }
 
-const stars = generateStars(80);
+const stars = generateStars(14);
 
 /* ───────── CSS ───────── */
 const css = `
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
 
 /* ── prevent white overscroll ── */
 html, body {
@@ -169,7 +170,7 @@ html, body {
 
 @keyframes star-twinkle {
   0%   { opacity: var(--base-op, 0.15); transform: rotate(var(--rot, 0deg)) scale(1); }
-  50%  { opacity: calc(var(--base-op, 0.15) * 2); transform: rotate(var(--rot, 0deg)) scale(1.15); }
+  50%  { opacity: calc(var(--base-op, 0.15) * 1.35); transform: rotate(var(--rot, 0deg)) scale(1.08); }
   100% { opacity: var(--base-op, 0.15); transform: rotate(var(--rot, 0deg)) scale(1); }
 }
 
@@ -190,7 +191,7 @@ html, body {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.028;
+  opacity: 0.012;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
@@ -198,8 +199,8 @@ html, body {
 
 /* ── soft glow ── */
 @keyframes glow-breathe {
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50%      { opacity: 0.55; transform: scale(1.05); }
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50%      { opacity: 0.34; transform: scale(1.03); }
 }
 
 .dawn-glow {
@@ -565,7 +566,7 @@ export default function Design7() {
               onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.8")}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
               </svg>
             </a>
 
@@ -592,7 +593,7 @@ export default function Design7() {
               }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
               </svg>
               {/* Tooltip */}
               <span
@@ -754,49 +755,45 @@ export default function Design7() {
             </svg>
           </div>
 
-          {/* Decorative arch */}
-          <div
-            className="dawn-rise"
-            style={{
-              width: 80,
-              height: 40,
-              borderRadius: "80px 80px 0 0",
-              border: `1.5px solid ${C.coral}33`,
-              borderBottom: "none",
-              marginBottom: "2rem",
-              position: "relative",
-              zIndex: 2,
-            }}
-          />
+          {/* ══════════ MOSQUE WEB REDESIGN ══════════ */}
 
-          {/* Small decorative star */}
-          <div className="dawn-rise dr-d1" style={{ marginBottom: "1.5rem", position: "relative", zIndex: 2 }}>
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path
-                d="M14 0L16 12L28 14L16 16L14 28L12 16L0 14L12 12L14 0Z"
-                fill={C.coral}
-                opacity="0.3"
-              />
-            </svg>
+          <div className="dawn-rise dr-d1" style={{ width: "100%", maxWidth: "900px", margin: "0 auto 2rem" }}>
+            <MosqueWeb />
           </div>
 
           <h1
-            className="dawn-rise dr-d1 hero-title"
+            className="dawn-rise dr-d2 hero-title"
             style={{
               fontFamily: "'Playfair Display', serif",
-              fontSize: "clamp(3.5rem, 10vw, 8rem)",
-              fontWeight: 900,
-              lineHeight: 0.92,
-              letterSpacing: "-0.02em",
+              fontSize: "clamp(2.5rem, 6vw, 4rem)",
+              fontWeight: 800,
+              lineHeight: 1.1,
+              letterSpacing: "-0.01em",
               color: C.ink,
-              marginBottom: "1.5rem",
+              marginBottom: "1rem",
               position: "relative",
               zIndex: 2,
             }}
           >
-            hack
-            <span style={{ color: C.coral, fontStyle: "italic", marginLeft: "0.1em" }}>.msa</span>
+            Connecting the Ummah
+            <br />
+            <span style={{ color: C.coral, fontStyle: "italic", fontSize: "0.9em" }}></span>
           </h1>
+
+          <p
+            className="dawn-rise dr-d3"
+            style={{
+              maxWidth: "600px",
+              margin: "0 auto",
+              fontSize: "1.1rem",
+              color: C.inkSoft,
+              lineHeight: 1.6,
+              zIndex: 2,
+              position: "relative",
+            }}
+          >
+            From the heart of Nueces Mosque to the furthest corners of the world.
+          </p>
 
           <p
             className="dawn-rise dr-d2"
@@ -849,7 +846,7 @@ export default function Design7() {
             >
               UT Austin
             </span>
-        </div>
+          </div>
 
           <a
             href="https://tally.so/r/OD5EQp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAP6PQVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacDomzsHP909x1Z_FRbvL8edD6CnOPYyt0492qc6l5NokRJfyAi1QfgvZbiEQ_aem_ja4QIfJQOO6O1FyN6jn7Yg"
@@ -1080,33 +1077,47 @@ export default function Design7() {
         </div>
 
         {/* ═══════════════ SCHEDULE ═══════════════ */}
+
+        {/* ═══════════════ SCHEDULE ═══════════════ */}
         <section
           id="schedule"
           style={{
-            padding: "6rem 2rem 8rem",
-            maxWidth: "820px",
+            padding: "8rem 2rem 10rem",
+            maxWidth: "1000px",
             margin: "0 auto",
             position: "relative",
             zIndex: 1,
           }}
         >
+          {/* Subtle geometric background for schedule area */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundImage: `radial-gradient(${C.coral}08 1px, transparent 1px)`,
+              backgroundSize: "32px 32px",
+              opacity: 0.5,
+              pointerEvents: "none",
+            }}
+          />
+
           {/* Section intro */}
-          <div style={{ marginBottom: "5rem" }}>
+          <div style={{ marginBottom: "5rem", textAlign: "center", position: "relative" }}>
             <span
               style={{
                 fontFamily: "'Lora', serif",
                 fontStyle: "italic",
                 color: C.coral,
-                fontSize: "0.85rem",
+                fontSize: "0.95rem",
                 letterSpacing: "0.05em",
               }}
             >
-              Two days, endless possibilities
+              The Journey
             </span>
             <h2
               style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
+                fontSize: "clamp(2.5rem, 5vw, 4rem)",
                 fontWeight: 800,
                 lineHeight: 1.1,
                 color: C.ink,
@@ -1115,36 +1126,95 @@ export default function Design7() {
             >
               Schedule
             </h2>
+            <div
+              style={{
+                marginTop: "1.5rem",
+                display: "flex",
+                justifyContent: "center",
+                gap: "1rem",
+                opacity: 0.6,
+              }}
+            >
+              {/* Decorative diamonds */}
+              {[0, 1, 2].map((i) => (
+                <div
+                  key={i}
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    background: C.gold,
+                    transform: "rotate(45deg)",
+                  }}
+                />
+              ))}
+            </div>
           </div>
 
-          {/* Days — side by side */}
+          {/* Days — Side by Side Arches */}
           <div
             className="schedule-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
               gap: "4rem",
+              alignItems: "start",
             }}
           >
             {Object.entries(SCHEDULE).map(([day, events], dayIdx) => (
-              <div key={day}>
-                {/* Day header — large, bold */}
-                <h3
+              <div
+                key={day}
+                className="alhambra-arch"
+                style={{
+                  background: C.surface,
+                  border: `1px solid ${C.border}`,
+                  borderRadius: "12rem 12rem 0.5rem 0.5rem",
+                  padding: "5rem 2.5rem 3rem",
+                  position: "relative",
+                  boxShadow: `0 20px 40px -10px ${C.ink}08`,
+                  overflow: "hidden",
+                }}
+              >
+                {/* Arch inner border decoration */}
+                <div
                   style={{
-                    fontFamily: "'Playfair Display', serif",
-                    fontWeight: 900,
-                    fontSize: "clamp(1.2rem, 2.5vw, 1.5rem)",
-                    color: C.ink,
-                    marginBottom: "2rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.05em",
+                    position: "absolute",
+                    top: "12px",
+                    left: "12px",
+                    right: "12px",
+                    bottom: "12px",
+                    border: `1px dashed ${C.coral}33`,
+                    borderRadius: "11.5rem 11.5rem 0.25rem 0.25rem",
+                    pointerEvents: "none",
                   }}
-                >
-                  {day.split(", ")[0]}
-                </h3>
+                />
 
-                {/* Events — times as margin notes, no timeline */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                {/* Day Header */}
+                <div style={{ textAlign: "center", marginBottom: "3rem", position: "relative", zIndex: 2 }}>
+                  <h3
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      fontWeight: 900,
+                      fontSize: "1.75rem",
+                      color: C.ink,
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    {day.split(", ")[0]}
+                  </h3>
+                  <span
+                    style={{
+                      fontFamily: "'Lora', serif",
+                      fontStyle: "italic",
+                      color: C.coral,
+                      fontSize: "1rem",
+                    }}
+                  >
+                    {day.split(", ")[1]}
+                  </span>
+                </div>
+
+                {/* Events List */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "2rem", position: "relative", zIndex: 2 }}>
                   {events.map((ev, i) => {
                     const isPrayer = (ev as { prayer?: boolean }).prayer;
                     return (
@@ -1152,51 +1222,80 @@ export default function Design7() {
                         key={i}
                         style={{
                           display: "flex",
-                          flexDirection: "column",
-                          gap: "0.25rem",
-                          padding: isPrayer ? "0.75rem 0.75rem 0.75rem 1rem" : "0",
-                          background: isPrayer ? `${C.gold}08` : "transparent",
-                          borderLeft: isPrayer ? `2px solid ${C.gold}30` : "none",
-                          marginLeft: isPrayer ? "-0.5rem" : "0",
+                          alignItems: "baseline",
+                          gap: "1rem",
+                          position: "relative",
                         }}
                       >
-                        {/* Time — bold */}
-                        <span
+                        {/* Timeline Marker: 8-pointed star */}
+                        <div
                           style={{
-                            fontFamily: "'Playfair Display', serif",
-                            fontWeight: 700,
-                            fontSize: "0.95rem",
-                            color: isPrayer ? C.gold : C.coral,
-                            letterSpacing: "-0.01em",
+                            width: "24px",
+                            height: "24px",
+                            flexShrink: 0,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            transform: "translateY(4px)", // align with text baseline roughly
                           }}
                         >
-                          {ev.time}
-                        </span>
+                          <svg
+                            viewBox="0 0 24 24"
+                            width={isPrayer ? "20" : "14"}
+                            height={isPrayer ? "20" : "14"}
+                            fill={isPrayer ? C.gold : C.coral}
+                            style={{
+                              opacity: isPrayer ? 1 : 0.6,
+                              filter: isPrayer ? `drop-shadow(0 0 4px ${C.gold}66)` : "none",
+                            }}
+                          >
+                            {/* Rub el Hizb (2 overlapping squares) */}
+                            <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2Z" />
+                          </svg>
+                        </div>
 
-                        {/* Event */}
-                        <span
-                          style={{
-                            fontSize: "0.95rem",
-                            color: C.ink,
-                            fontWeight: isPrayer ? 500 : 400,
-                          }}
-                        >
-                          {isPrayer && (
-                            <svg
-                              width="14"
-                              height="14"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              style={{ marginRight: "0.5rem", opacity: 0.5, display: "inline-block", verticalAlign: "middle" }}
-                            >
-                              <path
-                                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                                fill={C.gold}
-                              />
-                            </svg>
-                          )}
-                          {ev.event}
-                        </span>
+                        {/* Content */}
+                        <div style={{ flex: 1 }}>
+                          <div
+                            style={{
+                              fontFamily: "'Playfair Display', serif",
+                              fontWeight: 700,
+                              fontSize: "1rem",
+                              color: isPrayer ? C.gold : C.ink,
+                              marginBottom: "0.2rem",
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "0.5rem",
+                            }}
+                          >
+                            {ev.time}
+                          </div>
+                          <div
+                            style={{
+                              fontFamily: "'Lora', serif",
+                              fontSize: "0.95rem",
+                              color: isPrayer ? C.inkSoft : C.muted,
+                              lineHeight: 1.4,
+                              fontWeight: isPrayer ? 600 : 400,
+                            }}
+                          >
+                            {ev.event}
+                          </div>
+                        </div>
+
+                        {/* Prayer Highlight Background (Optional, kept subtle) */}
+                        {isPrayer && (
+                          <div
+                            style={{
+                              position: "absolute",
+                              inset: "-0.75rem -1rem",
+                              background: `linear-gradient(to right, ${C.gold}11, transparent)`,
+                              borderRadius: "4px",
+                              zIndex: -1,
+                              borderLeft: `3px solid ${C.gold}44`,
+                            }}
+                          />
+                        )}
                       </div>
                     );
                   })}
@@ -1205,18 +1304,18 @@ export default function Design7() {
             ))}
           </div>
 
-          {/* Schedule disclaimer */}
           <p
             style={{
-              marginTop: "3rem",
+              marginTop: "4rem",
               textAlign: "center",
               fontFamily: "'Lora', serif",
               fontStyle: "italic",
               fontSize: "0.85rem",
               color: C.muted,
+              opacity: 0.7,
             }}
           >
-            *Tentitive Schedule
+            *Schedule subject to change
           </p>
         </section>
 
@@ -1454,8 +1553,7 @@ export default function Design7() {
             April 18–19, 2026 · Austin, TX
           </p>
         </footer>
-    </div>
+      </div>
     </>
   );
 }
-
