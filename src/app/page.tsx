@@ -849,7 +849,7 @@ export default function Design7() {
             >
               UT Austin
             </span>
-          </div>
+        </div>
 
           <a
             href="https://tally.so/r/OD5EQp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAP6PQVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacDomzsHP909x1Z_FRbvL8edD6CnOPYyt0492qc6l5NokRJfyAi1QfgvZbiEQ_aem_ja4QIfJQOO6O1FyN6jn7Yg"
@@ -1182,7 +1182,18 @@ export default function Design7() {
                           }}
                         >
                           {isPrayer && (
-                            <span style={{ marginRight: "0.5rem", opacity: 0.5 }}>☪</span>
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              style={{ marginRight: "0.5rem", opacity: 0.5, display: "inline-block", verticalAlign: "middle" }}
+                            >
+                              <path
+                                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                                fill={C.gold}
+                              />
+                            </svg>
                           )}
                           {ev.event}
                         </span>
@@ -1443,7 +1454,7 @@ export default function Design7() {
             April 18–19, 2026 · Austin, TX
           </p>
         </footer>
-      </div>
+    </div>
     </>
   );
 }
