@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | hack.msa",
   },
   description:
-    "Inspiring the next generation of Muslim builders. Join us for a 24-hour hackathon at UT Austin, April 18-19. Open to all students.",
+    "Connecting the Ummah Via Tech. Join us for a 24-hour hackathon at UT Austin, April 18-19. Open to all students.",
   keywords: [
     "Hackathon",
     "MSA",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "hack.msa | Muslim Tech Hackathon",
     description:
-      "Inspiring the next generation of Muslim builders. Join us for a 24-hour hackathon at UT Austin, April 18-19.",
+      "Connecting the Ummah Via Tech. Join us for a 24-hour hackathon at UT Austin, April 18-19.",
     url: "https://www.hackmsa.com",
     siteName: "hack.msa",
     locale: "en_US",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "hack.msa | Muslim Tech Hackathon",
     description:
-      "Inspiring the next generation of Muslim builders. Join us for a 24-hour hackathon at UT Austin, April 18-19.",
+      "Connecting the Ummah Via Tech. Join us for a 24-hour hackathon at UT Austin, April 18-19.",
     images: ["/Nueces_Mosque.png"],
     creator: "@hackmsa",
   },

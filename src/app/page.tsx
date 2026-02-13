@@ -293,14 +293,41 @@ html, body {
     gap: 3rem !important;
   }
   
-  /* Hero title bigger on mobile */
-  .hero-title {
-    font-size: clamp(4.5rem, 15vw, 8rem) !important;
+  /* Hero typography tuning on mobile */
+  .hero-kicker {
+    font-size: clamp(3.5rem, 16vw, 6rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.03em !important;
+    text-transform: none !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-kicker-sub {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem) !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.03em !important;
+    max-width: 90% !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .hero-tagline {
+    font-size: clamp(0.75rem, 3.2vw, 0.9rem) !important;
+    line-height: 1.5 !important;
+    max-width: 32ch !important;
+    margin-bottom: 3rem !important;
+    margin-top: 1.5rem !important;
+    opacity: 0.9;
   }
   
   /* Hide extra stars on mobile (show 40 instead of 80) */
   .star-desktop-only {
     display: none !important;
+  }
+
+  /* Increase hero section width for star */
+  .hero-section {
+    padding: 6rem 0.5rem 4rem !important;
+    overflow-x: hidden !important;
   }
 }
 
@@ -625,6 +652,7 @@ export default function Design7() {
 
         {/* ═══════════════ HERO — the dawn sky ═══════════════ */}
         <section
+          className="hero-section"
           style={{
             minHeight: "100vh",
             display: "flex",
@@ -755,65 +783,67 @@ export default function Design7() {
             </svg>
           </div>
 
+          <div
+            className="dawn-rise dr-d1 hero-kicker"
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(3rem, 12vw, 5rem)",
+              letterSpacing: "-0.02em",
+              textTransform: "none",
+              fontWeight: 900,
+              color: C.ink,
+              marginBottom: "0.25rem",
+              lineHeight: 1.1,
+              position: "relative",
+              zIndex: 2,
+            }}
+          >
+            Hack MSA
+          </div>
+
+          <p
+            className="dawn-rise dr-d1 hero-kicker-sub"
+            style={{
+              fontFamily: "'Lora', serif",
+              fontSize: "clamp(0.9rem, 2vw, 1.1rem)",
+              color: C.coral,
+              fontStyle: "italic",
+              margin: "0 auto 1.45rem",
+              letterSpacing: "0.02em",
+              lineHeight: 1.45,
+              maxWidth: "34ch",
+              position: "relative",
+              zIndex: 2,
+            }}
+          >
+            UT Austin Muslim Students Association
+          </p>
+
           {/* ══════════ MOSQUE WEB REDESIGN ══════════ */}
 
-          <div className="dawn-rise dr-d1" style={{ width: "100%", maxWidth: "900px", margin: "0 auto 2rem" }}>
+          <div className="dawn-rise dr-d2" style={{ width: "100%", maxWidth: "1000px", margin: "1rem auto 3rem" }}>
             <MosqueWeb />
           </div>
 
-          <h1
-            className="dawn-rise dr-d2 hero-title"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "clamp(2.5rem, 6vw, 4rem)",
-              fontWeight: 800,
-              lineHeight: 1.1,
-              letterSpacing: "-0.01em",
-              color: C.ink,
-              marginBottom: "1rem",
-              position: "relative",
-              zIndex: 2,
-            }}
-          >
-            Connecting the Ummah
-            <br />
-            <span style={{ color: C.coral, fontStyle: "italic", fontSize: "0.9em" }}></span>
-          </h1>
-
           <p
-            className="dawn-rise dr-d3"
-            style={{
-              maxWidth: "600px",
-              margin: "0 auto",
-              fontSize: "1.1rem",
-              color: C.inkSoft,
-              lineHeight: 1.6,
-              zIndex: 2,
-              position: "relative",
-            }}
-          >
-            From the heart of Nueces Mosque to the furthest corners of the world.
-          </p>
-
-          <p
-            className="dawn-rise dr-d2"
+            className="dawn-rise dr-d4 hero-tagline"
             style={{
               fontFamily: "'Lora', serif",
-              fontSize: "clamp(1rem, 2.5vw, 1.3rem)",
+              fontSize: "clamp(0.82rem, 1.7vw, 0.95rem)",
               fontStyle: "italic",
               color: C.muted,
-              maxWidth: "420px",
-              lineHeight: 1.7,
-              marginBottom: "2.5rem",
+              maxWidth: "29ch",
+              lineHeight: 1.5,
+              marginBottom: "1.65rem",
               position: "relative",
               zIndex: 2,
             }}
           >
-            Inspiring the next generation of Muslim builders
+            Connecting the Ummah Via Tech
           </p>
 
           <div
-            className="dawn-rise dr-d3"
+            className="dawn-rise dr-d5"
             style={{
               display: "flex",
               gap: "1rem",
@@ -852,7 +882,7 @@ export default function Design7() {
             href="https://tally.so/r/OD5EQp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAP6PQVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacDomzsHP909x1Z_FRbvL8edD6CnOPYyt0492qc6l5NokRJfyAi1QfgvZbiEQ_aem_ja4QIfJQOO6O1FyN6jn7Yg"
             target="_blank"
             rel="noopener noreferrer"
-            className="dawn-rise dr-d4"
+            className="dawn-rise dr-d5"
             style={{
               display: "inline-block",
               padding: "1rem 2.5rem",

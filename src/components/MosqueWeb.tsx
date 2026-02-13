@@ -223,15 +223,17 @@ export default function MosqueWeb() {
         @media (max-width: 768px) {
             .mosque-web-container {
                 max-width: 100%;
-                transform: scale(0.65);
+                transform: scale(1.0);
+                margin-top: 15px;
+                margin-bottom: 30px;
             }
              .nucleus-wrapper {
                 width: 140px;
                 height: 140px;
              }
              .orbit-wrapper {
-                width: 70px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
              }
              .calli-word {
                 display: none;
