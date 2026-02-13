@@ -144,7 +144,7 @@ const stars = generateStars(80);
 
 /* ───────── CSS ───────── */
 const css = `
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
 /* ── prevent white overscroll ── */
 html, body {
@@ -565,7 +565,7 @@ export default function Design7() {
               onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.8")}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
               </svg>
             </a>
 
@@ -592,7 +592,7 @@ export default function Design7() {
               }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
               </svg>
               {/* Tooltip */}
               <span
@@ -761,9 +761,8 @@ export default function Design7() {
               width: 80,
               height: 40,
               borderRadius: "80px 80px 0 0",
-              borderTop: `1.5px solid ${C.coral}33`,
-              borderLeft: `1.5px solid ${C.coral}33`,
-              borderRight: `1.5px solid ${C.coral}33`,
+              border: `1.5px solid ${C.coral}33`,
+              borderBottom: "none",
               marginBottom: "2rem",
               position: "relative",
               zIndex: 2,
@@ -1081,47 +1080,33 @@ export default function Design7() {
         </div>
 
         {/* ═══════════════ SCHEDULE ═══════════════ */}
-
-        {/* ═══════════════ SCHEDULE ═══════════════ */}
         <section
           id="schedule"
           style={{
-            padding: "8rem 2rem 10rem",
-            maxWidth: "1000px",
+            padding: "6rem 2rem 8rem",
+            maxWidth: "820px",
             margin: "0 auto",
             position: "relative",
             zIndex: 1,
           }}
         >
-          {/* Subtle geometric background for schedule area */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundImage: `radial-gradient(${C.coral}08 1px, transparent 1px)`,
-              backgroundSize: "32px 32px",
-              opacity: 0.5,
-              pointerEvents: "none",
-            }}
-          />
-
           {/* Section intro */}
-          <div style={{ marginBottom: "5rem", textAlign: "center", position: "relative" }}>
+          <div style={{ marginBottom: "5rem" }}>
             <span
               style={{
                 fontFamily: "'Lora', serif",
                 fontStyle: "italic",
                 color: C.coral,
-                fontSize: "0.95rem",
+                fontSize: "0.85rem",
                 letterSpacing: "0.05em",
               }}
             >
-              The Journey
+              Two days, endless possibilities
             </span>
             <h2
               style={{
                 fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
                 fontWeight: 800,
                 lineHeight: 1.1,
                 color: C.ink,
@@ -1130,95 +1115,36 @@ export default function Design7() {
             >
               Schedule
             </h2>
-            <div
-              style={{
-                marginTop: "1.5rem",
-                display: "flex",
-                justifyContent: "center",
-                gap: "1rem",
-                opacity: 0.6,
-              }}
-            >
-              {/* Decorative diamonds */}
-              {[0, 1, 2].map((i) => (
-                <div
-                  key={i}
-                  style={{
-                    width: "8px",
-                    height: "8px",
-                    background: C.gold,
-                    transform: "rotate(45deg)",
-                  }}
-                />
-              ))}
-            </div>
           </div>
 
-          {/* Days — Side by Side Arches */}
+          {/* Days — side by side */}
           <div
             className="schedule-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
               gap: "4rem",
-              alignItems: "start",
             }}
           >
             {Object.entries(SCHEDULE).map(([day, events], dayIdx) => (
-              <div
-                key={day}
-                className="alhambra-arch"
-                style={{
-                  background: C.surface,
-                  border: `1px solid ${C.border}`,
-                  borderRadius: "12rem 12rem 0.5rem 0.5rem",
-                  padding: "5rem 2.5rem 3rem",
-                  position: "relative",
-                  boxShadow: `0 20px 40px -10px ${C.ink}08`,
-                  overflow: "hidden",
-                }}
-              >
-                {/* Arch inner border decoration */}
-                <div
+              <div key={day}>
+                {/* Day header — large, bold */}
+                <h3
                   style={{
-                    position: "absolute",
-                    top: "12px",
-                    left: "12px",
-                    right: "12px",
-                    bottom: "12px",
-                    border: `1px dashed ${C.coral}33`,
-                    borderRadius: "11.5rem 11.5rem 0.25rem 0.25rem",
-                    pointerEvents: "none",
+                    fontFamily: "'Playfair Display', serif",
+                    fontWeight: 900,
+                    fontSize: "clamp(1.2rem, 2.5vw, 1.5rem)",
+                    color: C.ink,
+                    marginBottom: "2rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
                   }}
-                />
+                >
+                  {day.split(", ")[0]}
+                </h3>
 
-                {/* Day Header */}
-                <div style={{ textAlign: "center", marginBottom: "3rem", position: "relative", zIndex: 2 }}>
-                  <h3
-                    style={{
-                      fontFamily: "'Playfair Display', serif",
-                      fontWeight: 900,
-                      fontSize: "1.75rem",
-                      color: C.ink,
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    {day.split(", ")[0]}
-                  </h3>
-                  <span
-                    style={{
-                      fontFamily: "'Lora', serif",
-                      fontStyle: "italic",
-                      color: C.coral,
-                      fontSize: "1rem",
-                    }}
-                  >
-                    {day.split(", ")[1]}
-                  </span>
-                </div>
-
-                {/* Events List */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "2rem", position: "relative", zIndex: 2 }}>
+                {/* Events — times as margin notes, no timeline */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                   {events.map((ev, i) => {
                     const isPrayer = (ev as { prayer?: boolean }).prayer;
                     return (
@@ -1226,80 +1152,51 @@ export default function Design7() {
                         key={i}
                         style={{
                           display: "flex",
-                          alignItems: "baseline",
-                          gap: "1rem",
-                          position: "relative",
+                          flexDirection: "column",
+                          gap: "0.25rem",
+                          padding: isPrayer ? "0.75rem 0.75rem 0.75rem 1rem" : "0",
+                          background: isPrayer ? `${C.gold}08` : "transparent",
+                          borderLeft: isPrayer ? `2px solid ${C.gold}30` : "none",
+                          marginLeft: isPrayer ? "-0.5rem" : "0",
                         }}
                       >
-                        {/* Timeline Marker: 8-pointed star */}
-                        <div
+                        {/* Time — bold */}
+                        <span
                           style={{
-                            width: "24px",
-                            height: "24px",
-                            flexShrink: 0,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            transform: "translateY(4px)", // align with text baseline roughly
+                            fontFamily: "'Playfair Display', serif",
+                            fontWeight: 700,
+                            fontSize: "0.95rem",
+                            color: isPrayer ? C.gold : C.coral,
+                            letterSpacing: "-0.01em",
                           }}
                         >
-                          <svg
-                            viewBox="0 0 24 24"
-                            width={isPrayer ? "20" : "14"}
-                            height={isPrayer ? "20" : "14"}
-                            fill={isPrayer ? C.gold : C.coral}
-                            style={{
-                              opacity: isPrayer ? 1 : 0.6,
-                              filter: isPrayer ? `drop-shadow(0 0 4px ${C.gold}66)` : "none",
-                            }}
-                          >
-                            {/* Rub el Hizb (2 overlapping squares) */}
-                            <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2Z" />
-                          </svg>
-                        </div>
+                          {ev.time}
+                        </span>
 
-                        {/* Content */}
-                        <div style={{ flex: 1 }}>
-                          <div
-                            style={{
-                              fontFamily: "'Playfair Display', serif",
-                              fontWeight: 700,
-                              fontSize: "1rem",
-                              color: isPrayer ? C.gold : C.ink,
-                              marginBottom: "0.2rem",
-                              display: "flex",
-                              alignItems: "center",
-                              gap: "0.5rem",
-                            }}
-                          >
-                            {ev.time}
-                          </div>
-                          <div
-                            style={{
-                              fontFamily: "'Lora', serif",
-                              fontSize: "0.95rem",
-                              color: isPrayer ? C.inkSoft : C.muted,
-                              lineHeight: 1.4,
-                              fontWeight: isPrayer ? 600 : 400,
-                            }}
-                          >
-                            {ev.event}
-                          </div>
-                        </div>
-
-                        {/* Prayer Highlight Background (Optional, kept subtle) */}
-                        {isPrayer && (
-                          <div
-                            style={{
-                              position: "absolute",
-                              inset: "-0.75rem -1rem",
-                              background: `linear-gradient(to right, ${C.gold}11, transparent)`,
-                              borderRadius: "4px",
-                              zIndex: -1,
-                              borderLeft: `3px solid ${C.gold}44`,
-                            }}
-                          />
-                        )}
+                        {/* Event */}
+                        <span
+                          style={{
+                            fontSize: "0.95rem",
+                            color: C.ink,
+                            fontWeight: isPrayer ? 500 : 400,
+                          }}
+                        >
+                          {isPrayer && (
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              style={{ marginRight: "0.5rem", opacity: 0.5, display: "inline-block", verticalAlign: "middle" }}
+                            >
+                              <path
+                                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                                fill={C.gold}
+                              />
+                            </svg>
+                          )}
+                          {ev.event}
+                        </span>
                       </div>
                     );
                   })}
@@ -1308,18 +1205,18 @@ export default function Design7() {
             ))}
           </div>
 
+          {/* Schedule disclaimer */}
           <p
             style={{
-              marginTop: "4rem",
+              marginTop: "3rem",
               textAlign: "center",
               fontFamily: "'Lora', serif",
               fontStyle: "italic",
               fontSize: "0.85rem",
               color: C.muted,
-              opacity: 0.7,
             }}
           >
-            *Schedule subject to change
+            *Tentitive Schedule
           </p>
         </section>
 
