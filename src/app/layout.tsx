@@ -112,7 +112,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
-        {/* <MicrosoftClarity /> */}
+        <MicrosoftClarity />
       </body>
     </html>
   );
