@@ -88,7 +88,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "How can I volunteer or mentor?",
-    a: "We're always looking for mentors to answer student questions and workshop suggestions, as well as general volunteers to help run the event. If you want to help out, reach out to us at hello@hackmsa.com!",
+    a: "We're always looking for mentors to answer student questions and workshop suggestions, as well as general volunteers to help run the event. If you want to help out, reach out to us at team@hackmsa.com!",
   },
   {
     q: "Do you provide travel reimbursements?",
