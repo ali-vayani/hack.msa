@@ -32,20 +32,22 @@ const C = {
 /* ───────── data ───────── */
 const SCHEDULE = {
   "Saturday, April 18": [
-    { time: "11:00 AM", event: "Check-in" },
-    { time: "12:00 PM", event: "Opening Ceremony" },
+    { time: "8:00 AM", event: "Check-In" },
+    { time: "10:30 AM", event: "Opening Ceremony" },
+    { time: "11:30 AM", event: "Hacking Starts / Late Check-In" },
     { time: "1:00 PM", event: "Lunch & Dhuhr Prayer", prayer: true },
     { time: "4:00 PM", event: "Asr Prayer", prayer: true },
-    { time: "4:15 PM", event: "Title Sponsor Event" },
-    { time: "7:00 PM", event: "Maghrib Prayer", prayer: true },
-    { time: "8:00 PM", event: "Dinner & Isha Prayer", prayer: true },
-    { time: "11:00 PM", event: "Fireside Chat @ Nueces" },
+    { time: "7:00 PM", event: "Dinner & Maghrib Prayer", prayer: true },
+    { time: "8:00 PM", event: "Isha Prayer", prayer: true },
+    { time: "9:00 PM", event: "More stuff" },
   ],
   "Sunday, April 19": [
     { time: "6:00 AM", event: "Fajr Prayer", prayer: true },
     { time: "9:00 AM", event: "Breakfast" },
     { time: "10:00 AM", event: "Judging" },
     { time: "11:30 AM", event: "Closing Ceremony" },
+    { time: "4:00 PM", event: "End of Event" },
+    { time: "4:00 PM", event: "Clean Up" },
   ],
 };
 
@@ -88,7 +90,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "How can I volunteer or mentor?",
-    a: "We're always looking for mentors to answer student questions and workshop suggestions, as well as general volunteers to help run the event. If you want to help out, reach out to us at team@hackmsa.com!",
+    a: "We're always looking for mentors to answer student questions and workshop suggestions, as well as general volunteers to help run the event. If you want to help out, reach out to us at ut.hackmsa@gmail.com!",
   },
   {
     q: "Do you provide travel reimbursements?",
@@ -96,7 +98,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "I have more questions. Who do I contact?",
-    a: "If you have further questions, don't hesitate to reach out to team@hackmsa.org. We're here to help!",
+    a: "If you have further questions, don't hesitate to reach out to ut.hackmsa@gmail.com. We're here to help!",
   },
 ];
 
