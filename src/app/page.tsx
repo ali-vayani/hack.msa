@@ -142,7 +142,7 @@ function generateStars(count: number) {
   return out;
 }
 
-const stars = generateStars(80);
+const stars = generateStars(40);
 
 /* ───────── CSS ───────── */
 const css = `
