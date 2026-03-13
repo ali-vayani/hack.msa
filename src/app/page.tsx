@@ -32,22 +32,30 @@ const C = {
 /* ───────── data ───────── */
 const SCHEDULE = {
   "Saturday, April 18": [
-    { time: "8:00 AM", event: "Check-In" },
-    { time: "10:30 AM", event: "Opening Ceremony" },
-    { time: "11:30 AM", event: "Hacking Starts / Late Check-In" },
-    { time: "1:00 PM", event: "Lunch & Dhuhr Prayer", prayer: true },
-    { time: "4:00 PM", event: "Asr Prayer", prayer: true },
-    { time: "7:00 PM", event: "Dinner & Maghrib Prayer", prayer: true },
-    { time: "8:00 PM", event: "Isha Prayer", prayer: true },
-    { time: "9:00 PM", event: "More stuff" },
+    { time: "8:00 – 10:00 AM", event: "Check-In" },
+    { time: "10:30 – 11:30 AM", event: "Opening Ceremony" },
+    { time: "11:30 AM – 2:00 PM", event: "Late Check-In / Walk-Ins" },
+    { time: "12:00 – 1:00 PM", event: "Workshop 1" },
+    { time: "1:00 – 2:00 PM", event: "Food" },
+    { time: "2:00 – 2:30 PM", event: "Dhuhr Prayer", prayer: true },
+    { time: "2:30 – 3:30 PM", event: "Workshop 2" },
+    { time: "3:30 – 4:30 PM", event: "Workshop 3" },
+    { time: "4:30 – 5:30 PM", event: "Workshop 4" },
+    { time: "5:30 – 6:30 PM", event: "Workshop 5" },
+    { time: "6:30 – 7:00 PM", event: "Asr Prayer", prayer: true },
+    { time: "7:00 – 8:00 PM", event: "Dinner" },
+    { time: "8:00 – 8:30 PM", event: "Maghrib Prayer", prayer: true },
+    { time: "9:00 PM", event: "Isha @ Nueces", prayer: true },
+    { time: "9:30 – 11:00 PM", event: "Fireside Chat @ Nueces + Vendors" },
+    { time: "11:00 PM", event: "Sleeping Room Open" },
   ],
   "Sunday, April 19": [
     { time: "6:00 AM", event: "Fajr Prayer", prayer: true },
-    { time: "9:00 AM", event: "Breakfast" },
-    { time: "10:00 AM", event: "Judging" },
-    { time: "11:30 AM", event: "Closing Ceremony" },
-    { time: "4:00 PM", event: "End of Event" },
-    { time: "4:00 PM", event: "Clean Up" },
+    { time: "6:30 – 7:30 AM", event: "Breakfast" },
+    { time: "11:00 AM – 2:00 PM", event: "Judging" },
+    { time: "1:00 – 1:30 PM", event: "Dhuhr Prayer", prayer: true },
+    { time: "2:00 – 3:00 PM", event: "Closing Ceremony" },
+    { time: "3:00 PM", event: "Lunch" },
   ],
 };
 
@@ -58,7 +66,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "Who can participate?",
-    a: "Any college student! You don't need to be a UT student or Muslim to participate. Everyone is welcome.",
+    a: "Open to college students and young professionals! You don't need to be a UT student to participate.",
   },
   {
     q: "Do I need coding experience?",
@@ -86,11 +94,11 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "What if I missed the application deadline?",
-    a: "We'll have walk-in registration on Saturday, April 19th! The specific closing time will be announced on our website during event week. This is first come, first serve until we hit capacity — admission is not guaranteed, so we advise non-Austin attendees to not travel for walk-in registration.",
+    a: "No worries — we'll have walk-in registration available during late check-in on Saturday (11:30 AM – 2:00 PM). Walk-ins are first come, first serve until we hit capacity, so admission is not guaranteed.",
   },
   {
     q: "How can I volunteer or mentor?",
-    a: "We're always looking for mentors to answer student questions and workshop suggestions, as well as general volunteers to help run the event. If you want to help out, reach out to us at ut.hackmsa@gmail.com!",
+    a: "We're always looking for mentors to answer student questions and workshop suggestions, as well as general volunteers to help run the event. Reach out to us if you want to help out!",
   },
   {
     q: "Do you provide travel reimbursements?",
@@ -98,7 +106,7 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: "I have more questions. Who do I contact?",
-    a: "If you have further questions, don't hesitate to reach out to ut.hackmsa@gmail.com. We're here to help!",
+    a: "If you have further questions, reach out to us on Instagram @hack.msa. We're here to help!",
   },
 ];
 
@@ -288,6 +296,12 @@ html, body {
     padding-top: 0 !important;
   }
   
+  /* Tracks single column on mobile */
+  .tracks-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
   /* Schedule single column on mobile */
   .schedule-grid {
     grid-template-columns: 1fr !important;
@@ -434,6 +448,17 @@ html, body {
 
 export default function Design7() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [showTracks, setShowTracks] = useState(false);
+
+  useEffect(() => {
+    const reveal = new Date("2026-04-18T12:00:00").getTime();
+    const check = () => {
+      if (Date.now() >= reveal) setShowTracks(true);
+    };
+    check();
+    const id = setInterval(check, 60_000);
+    return () => clearInterval(id);
+  }, []);
 
   // Set body background color for overscroll
   useEffect(() => {
@@ -1023,7 +1048,7 @@ export default function Design7() {
                 { num: "24", label: "hours" },
                 { num: "∞", label: "community" },
                 { num: "250+", label: "hackers" },
-                { num: "$4,000+", label: "in prizes" },
+                { num: "$5,000", label: "in prizes" },
               ].map((s, i) => (
                 <div
                   key={i}
@@ -1082,7 +1107,162 @@ export default function Design7() {
           <div style={{ flex: 1, maxWidth: "200px", height: "1px", background: `linear-gradient(to left, transparent, ${C.coral}40)` }} />
         </div>
 
-        {/* ═══════════════ SCHEDULE ═══════════════ */}
+        {/* ═══════════════ TRACKS ═══════════════ */}
+        {showTracks && <><section
+          id="tracks"
+          style={{
+            background: C.skyBot,
+            padding: "6rem 2rem 5rem",
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <div style={{ maxWidth: "960px", margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+              <span
+                style={{
+                  fontFamily: "'Lora', serif",
+                  fontStyle: "italic",
+                  color: C.coral,
+                  fontSize: "0.85rem",
+                  letterSpacing: "0.05em",
+                }}
+              >
+                Choose your path
+              </span>
+              <h2
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
+                  fontWeight: 800,
+                  lineHeight: 1.1,
+                  color: C.ink,
+                  marginTop: "1rem",
+                }}
+              >
+                Tracks
+              </h2>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "2rem",
+              }}
+              className="tracks-grid"
+            >
+              {[
+                {
+                  title: "No-Code Track",
+                  badge: "Main",
+                  desc: "Build and launch real projects using Replit and low-code tools, no programming experience required.",
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={C.coral} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="3" width="20" height="14" rx="2" />
+                      <path d="M8 21h8M12 17v4" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: "Med Tech Track",
+                  desc: "Create innovative solutions that improve healthcare, medical technology, and patient outcomes.",
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={C.coral} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2v20M2 12h20" />
+                      <rect x="5" y="5" width="14" height="14" rx="2" />
+                    </svg>
+                  ),
+                },
+                {
+                  title: "Giving Back Track",
+                  desc: "Develop technology projects focused on social good, community impact, and solving real-world challenges.",
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke={C.coral} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                  ),
+                },
+              ].map((track) => (
+                <div
+                  key={track.title}
+                  className="card-dawn"
+                  style={{
+                    padding: "2.5rem 2rem",
+                    border: `1px solid ${C.border}`,
+                    borderRadius: "2px",
+                    background: C.surface,
+                    textAlign: "center",
+                    position: "relative",
+                  }}
+                >
+                  {track.badge && (
+                    <span
+                      style={{
+                        position: "absolute",
+                        top: "1rem",
+                        right: "1rem",
+                        fontFamily: "'Lora', serif",
+                        fontSize: "0.7rem",
+                        fontWeight: 600,
+                        letterSpacing: "0.08em",
+                        textTransform: "uppercase",
+                        color: C.coral,
+                        background: `${C.coral}12`,
+                        border: `1px solid ${C.coral}30`,
+                        padding: "0.25rem 0.6rem",
+                        borderRadius: "999px",
+                      }}
+                    >
+                      {track.badge}
+                    </span>
+                  )}
+                  <div style={{ marginBottom: "1.25rem", opacity: 0.7 }}>
+                    {track.icon}
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: "'Playfair Display', serif",
+                      fontWeight: 700,
+                      fontSize: "1.25rem",
+                      color: C.ink,
+                      marginBottom: "0.75rem",
+                    }}
+                  >
+                    {track.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: "'Lora', serif",
+                      fontSize: "0.9rem",
+                      color: C.muted,
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    {track.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "1.5rem",
+            padding: "3rem 2rem",
+            background: C.skyBot,
+          }}
+        >
+          <div style={{ flex: 1, maxWidth: "200px", height: "1px", background: `linear-gradient(to right, transparent, ${C.coral}40)` }} />
+          <svg width="16" height="16" viewBox="0 0 24 24" fill={C.coral} opacity={0.35}>
+            <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" />
+          </svg>
+          <div style={{ flex: 1, maxWidth: "200px", height: "1px", background: `linear-gradient(to left, transparent, ${C.coral}40)` }} />
+        </div></>}
 
         {/* ═══════════════ SCHEDULE ═══════════════ */}
         <section
