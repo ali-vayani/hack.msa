@@ -880,7 +880,7 @@ export default function Design7() {
         </div>
 
           <a
-            href="https://tally.so/r/OD5EQp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAP6PQVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacDomzsHP909x1Z_FRbvL8edD6CnOPYyt0492qc6l5NokRJfyAi1QfgvZbiEQ_aem_ja4QIfJQOO6O1FyN6jn7Yg"
+            href="https://tally.so/r/0QPVAZ?utm_source=website"
             target="_blank"
             rel="noopener noreferrer"
             className="dawn-rise dr-d4"
