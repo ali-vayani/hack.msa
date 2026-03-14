@@ -873,7 +873,7 @@ export default function Design7() {
               zIndex: 2,
             }}
           >
-            Interest Form
+            Apply Now
           </a>
 
           {/* Scroll indicator */}
