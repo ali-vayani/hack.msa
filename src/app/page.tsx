@@ -879,30 +879,25 @@ export default function Design7() {
             </span>
         </div>
 
-          <a
-            href="https://tally.so/r/OD5EQp?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAP6PQVleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacDomzsHP909x1Z_FRbvL8edD6CnOPYyt0492qc6l5NokRJfyAi1QfgvZbiEQ_aem_ja4QIfJQOO6O1FyN6jn7Yg"
-            target="_blank"
-            rel="noopener noreferrer"
+          <span
             className="dawn-rise dr-d4"
             style={{
               display: "inline-block",
               padding: "1rem 2.5rem",
-              background: C.coral,
-              color: "#fff",
+              background: C.muted + "18",
+              color: C.muted,
               fontFamily: "'Playfair Display', serif",
               fontWeight: 700,
               fontSize: "1rem",
               borderRadius: "4px",
-              textDecoration: "none",
               letterSpacing: "0.03em",
-              transition: "all 0.3s",
-              boxShadow: `0 4px 20px ${C.coral}28`,
               position: "relative",
               zIndex: 2,
+              border: `1px solid ${C.muted}30`,
             }}
           >
-            Interest Form
-          </a>
+            Applications Closed
+          </span>
 
           {/* Scroll indicator */}
           <div
