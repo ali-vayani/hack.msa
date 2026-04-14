@@ -34,6 +34,7 @@ const SCHEDULE = {
   "Saturday, April 18": [
     { time: "8:00 – 10:00 AM", event: "Check-In" },
     { time: "10:30 – 11:30 AM", event: "Opening Ceremony" },
+    { time: "11:30 AM", event: "Hacking Starts" },
     { time: "11:30 AM – 2:00 PM", event: "Late Check-In / Walk-Ins" },
     { time: "12:00 – 1:00 PM", event: "Vibe Coding Workshop" },
     { time: "1:00 – 2:00 PM", event: "Food" },
@@ -52,7 +53,8 @@ const SCHEDULE = {
   "Sunday, April 19": [
     { time: "6:00 AM", event: "Fajr Prayer", prayer: true },
     { time: "6:30 – 7:30 AM", event: "Breakfast" },
-    { time: "11:00 AM – 2:00 PM", event: "Judging" },
+    { time: "11:30 AM", event: "Hacking Ends" },
+    { time: "12:00 AM – 2:00 PM", event: "Judging" },
     { time: "1:00 – 1:30 PM", event: "Dhuhr Prayer", prayer: true },
     { time: "2:00 – 3:00 PM", event: "Closing Ceremony" },
     { time: "3:00 PM", event: "Lunch" },
