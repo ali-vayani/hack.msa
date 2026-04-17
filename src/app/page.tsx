@@ -36,6 +36,7 @@ const SCHEDULE = {
     { time: "10:30 – 11:30 AM", event: "Opening Ceremony" },
     { time: "11:30 AM", event: "Hacking Starts" },
     { time: "11:30 AM – 2:00 PM", event: "Late Check-In / Walk-Ins" },
+    { time: "11:45 AM - 12:30 PM", event: "Candid Convos: Being Muslim in Non-Muslim Spaces"},
     { time: "12:00 – 1:00 PM", event: "Vibe Coding Workshop" },
     { time: "1:00 – 2:00 PM", event: "Food" },
     { time: "2:00 – 2:30 PM", event: "Dhuhr Prayer", prayer: true },
