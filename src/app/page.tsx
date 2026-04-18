@@ -47,7 +47,7 @@ const SCHEDULE = {
     { time: "6:30 – 6:45 PM", event: "Asr Prayer", room: "GDC Courtyard", prayer: true },
     { time: "6:45 – 7:45 PM", event: "Dinner", room: "GDC Atrium" },
     { time: "7:45 – 8:00 PM", event: "Maghrib Prayer", room: "GDC Courtyard", prayer: true },
-    { time: "8:30 PM", event: "Isha Prayer", room: "Nueces Mosque", prayer: true },
+    { time: "9:30 PM", event: "Isha Prayer", room: "Nueces Mosque", prayer: true },
     { time: "9:00 – 10:30 PM", event: "Fireside Chat + Vendors", room: "Nueces Mosque" },
     { time: "11:00 PM", event: "Sleeping Room Open" },
   ],
