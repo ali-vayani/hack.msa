@@ -1742,7 +1742,7 @@ export default function Design7() {
         style={{
           display: "none",
           position: "fixed",
-          bottom: "10rem",
+          bottom: "5rem",
           right: "1.5rem",
           zIndex: 999,
           width: "52px",
