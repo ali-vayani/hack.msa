@@ -32,33 +32,33 @@ const C = {
 /* ───────── data ───────── */
 const SCHEDULE = {
   "Saturday, April 18": [
-    { time: "8:00 – 10:00 AM", event: "Check-In" },
-    { time: "10:30 – 11:30 AM", event: "Opening Ceremony" },
-    { time: "11:30 AM", event: "Hacking Starts" },
-    { time: "11:30 AM – 2:00 PM", event: "Late Check-In / Walk-Ins" },
-    { time: "11:45 AM - 12:30 PM", event: "Candid Convos: Being Muslim in Non-Muslim Spaces"},
-    { time: "12:00 – 1:00 PM", event: "Vibe Coding Workshop" },
-    { time: "1:00 – 2:00 PM", event: "Food" },
-    { time: "2:00 – 2:30 PM", event: "Dhuhr Prayer", prayer: true },
-    { time: "2:30 – 3:30 PM", event: "Principles of Building Workshop" },
-    { time: "3:30 – 4:30 PM", event: "Giving BackWorkshop" },
-    { time: "4:30 – 5:30 PM", event: "Go To Market Workshop" },
-    { time: "5:30 – 6:30 PM", event: "MedTech Workshop" },
-    { time: "6:30 – 7:00 PM", event: "Asr Prayer", prayer: true },
-    { time: "7:00 – 8:00 PM", event: "Dinner" },
-    { time: "8:00 – 8:30 PM", event: "Maghrib Prayer", prayer: true },
-    { time: "9:00 PM", event: "Isha @ Nueces", prayer: true },
-    { time: "9:30 – 11:00 PM", event: "Fireside Chat @ Nueces + Vendors" },
+    { time: "8:00 – 10:00 AM", event: "Check-In", room: "GDC Atrium" },
+    { time: "10:30 – 11:30 AM", event: "Opening Ceremony", room: "GDC Auditorium" },
+    { time: "11:30 AM", event: "Hacking Starts"},
+    { time: "11:30 AM – 2:00 PM", event: "Late Check-In / Walk-Ins", room: "GDC Atrium" },
+    { time: "11:45 AM - 12:30 PM", event: "Candid Convos: Being Muslim in Non-Muslim Spaces", room: "GDC 6.302" },
+    { time: "12:30 – 1:30 PM", event: "Vibe Coding Workshop", room: "GDC 6.302" },
+    { time: "1:30 – 2:10 PM", event: "Food", room: "GDC Atrium" },
+    { time: "2:10 – 2:30 PM", event: "Dhuhr Prayer", room: "GDC Courtyard", prayer: true },
+    { time: "2:30 – 3:30 PM", event: "Principles of Building Workshop", room: "GDC 6.302" },
+    { time: "3:30 – 4:30 PM", event: "Giving Back Workshop", room: "GDC 6.302" },
+    { time: "4:30 – 5:30 PM", event: "Go To Market Workshop", room: "GDC 6.302" },
+    { time: "5:30 – 6:30 PM", event: "Med Tech Workshop", room: "GDC 6.302" },
+    { time: "6:30 – 7:00 PM", event: "Asr Prayer", room: "GDC Courtyard", prayer: true },
+    { time: "7:00 – 8:00 PM", event: "Dinner", room: "GDC Atrium" },
+    { time: "8:00 – 8:30 PM", event: "Maghrib Prayer", room: "GDC Courtyard", prayer: true },
+    { time: "9:00 PM", event: "Isha Prayer", room: "Nueces Mosque", prayer: true },
+    { time: "9:30 – 11:00 PM", event: "Fireside Chat + Vendors", room: "Nueces Mosque" },
     { time: "11:00 PM", event: "Sleeping Room Open" },
   ],
   "Sunday, April 19": [
-    { time: "6:00 AM", event: "Fajr Prayer", prayer: true },
-    { time: "6:30 – 7:30 AM", event: "Breakfast" },
-    { time: "11:30 AM", event: "Hacking Ends" },
-    { time: "12:00 AM – 2:00 PM", event: "Judging" },
-    { time: "1:00 – 1:30 PM", event: "Dhuhr Prayer", prayer: true },
-    { time: "2:00 – 3:00 PM", event: "Closing Ceremony" },
-    { time: "3:00 PM", event: "Lunch" },
+    { time: "6:00 AM", event: "Fajr Prayer", room: "GDC Courtyard", prayer: true },
+    { time: "6:30 – 7:30 AM", event: "Breakfast", room: "GDC Atrium" },
+    { time: "11:30 AM", event: "Hacking Ends"},
+    { time: "12:00 AM – 2:00 PM", event: "Judging", room: "WEL 1.316" },
+    { time: "2:00 – 2:30 PM", event: "Dhuhr Prayer", room: "GDC Atrium", prayer: true },
+    { time: "2:30 – 3:30 PM", event: "Closing Ceremony", room: "GDC Auditorium" },
+    { time: "3:30 PM", event: "Lunch", room: "GDC Atrium" },
   ],
 };
 
@@ -1468,6 +1468,19 @@ export default function Design7() {
                           >
                             {ev.event}
                           </div>
+                          {ev.room && (
+                            <div
+                              style={{
+                                fontFamily: "'Lora', serif",
+                                fontSize: "0.82rem",
+                                color: C.faint,
+                                lineHeight: 1.3,
+                                marginTop: "0.2rem",
+                              }}
+                            >
+                              Room: {ev.room}
+                            </div>
+                          )}
                         </div>
 
                         {/* Prayer Highlight Background (Optional, kept subtle) */}
